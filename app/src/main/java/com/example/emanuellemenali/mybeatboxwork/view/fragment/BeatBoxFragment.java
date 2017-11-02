@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class BeatBoxFragment extends Fragment {
 
         FragmentBeatBoxBinding binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_beat_box, container, false);
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return binding.getRoot();
     }
 }
