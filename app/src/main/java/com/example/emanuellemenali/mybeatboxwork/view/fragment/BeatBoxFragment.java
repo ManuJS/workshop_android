@@ -26,7 +26,7 @@ public class BeatBoxFragment extends Fragment {
         FragmentBeatBoxBinding binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_beat_box, container, false);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        binding.recyclerView.setAdapter(new SoundAdapter());
+//        binding.recyclerView.setAdapter(new SoundAdapter());
         //vamos dar uma pausa e criar nossa classe de modelo do beatbox
 
         return binding.getRoot();
