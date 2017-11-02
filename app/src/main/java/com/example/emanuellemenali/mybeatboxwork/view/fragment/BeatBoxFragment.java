@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.emanuellemenali.mybeatboxwork.R;
 import com.example.emanuellemenali.mybeatboxwork.databinding.FragmentBeatBoxBinding;
+import com.example.emanuellemenali.mybeatboxwork.view.adapter.SoundAdapter;
 
 public class BeatBoxFragment extends Fragment {
 
@@ -25,6 +26,9 @@ public class BeatBoxFragment extends Fragment {
         FragmentBeatBoxBinding binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_beat_box, container, false);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        binding.recyclerView.setAdapter(new SoundAdapter());
+        //vamos dar uma pausa e criar nossa classe de modelo do beatbox
+
         return binding.getRoot();
     }
 }
