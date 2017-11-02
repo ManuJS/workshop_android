@@ -1,8 +1,10 @@
 package com.example.emanuellemenali.mybeatboxwork.view.fragment;
 
-/**
- * Created by emanu on 02/11/2017.
- */
+import android.support.v4.app.Fragment;
 
-public class BeatBoxFragment {
+public class BeatBoxFragment extends Fragment {
+
+    public static BeatBoxFragment newInstance(){
+        return new BeatBoxFragment();
+    }
 }
