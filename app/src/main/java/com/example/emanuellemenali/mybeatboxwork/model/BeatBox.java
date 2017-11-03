@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.res.AssetManager;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BeatBox {
 
@@ -11,6 +13,7 @@ public class BeatBox {
     private static final String SOUNDS_FOLDER = "sample_sounds";
 
     private AssetManager mAssets;
+    private List<Sound> mSounds = new ArrayList<>();
 
     public BeatBox(Context context) {
         mAssets = context.getAssets();
@@ -26,6 +29,16 @@ public class BeatBox {
         } catch (IOException e) {
             return;
         }
+
+        for (String filename : soundNames){
+            String assetPath = SOUNDS_FOLDER + "/" + filename;
+            Sound sound = new Sound(assetPath);
+            mSounds.add(sound);
+        }
+    }
+
+    public List<Sound> getSounds(){
+        return mSounds;
     }
 
 
