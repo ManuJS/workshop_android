@@ -11,12 +11,21 @@ import android.view.ViewGroup;
 
 import com.example.emanuellemenali.mybeatboxwork.R;
 import com.example.emanuellemenali.mybeatboxwork.databinding.FragmentBeatBoxBinding;
+import com.example.emanuellemenali.mybeatboxwork.model.BeatBox;
 import com.example.emanuellemenali.mybeatboxwork.view.adapter.SoundAdapter;
 
 public class BeatBoxFragment extends Fragment {
 
+    private BeatBox mBeatBox;
+
     public static BeatBoxFragment newInstance(){
         return new BeatBoxFragment();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mBeatBox = new BeatBox(getActivity());
     }
 
     @Nullable
