@@ -45,6 +45,6 @@ public class SoundAdapter extends RecyclerView.Adapter<SoundHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mSounds.size();
     }
 }
