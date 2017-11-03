@@ -23,4 +23,8 @@ public class SoundViewModel {
     public void setmSound(Sound sound){
         mSound = sound;
     }
+
+    public String getTitle(){
+        return mSound.getName();
+    }
 }

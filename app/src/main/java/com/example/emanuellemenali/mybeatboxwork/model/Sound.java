@@ -11,6 +11,19 @@ public class Sound {
         this.name = fileName;
     }
 
+    public String getmAssetPath() {
+        return mAssetPath;
+    }
 
+    public void setmAssetPath(String mAssetPath) {
+        this.mAssetPath = mAssetPath;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
