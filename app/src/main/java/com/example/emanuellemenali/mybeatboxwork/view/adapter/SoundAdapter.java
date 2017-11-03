@@ -35,7 +35,7 @@ public class SoundAdapter extends RecyclerView.Adapter<SoundHolder> {
     public SoundHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         ListItemSoundBinding binding = DataBindingUtil.inflate(inflater, R.layout.list_item_sound, parent, false);
-        return new SoundHolder(binding);
+        return new SoundHolder(binding, mBeatBox);
     }
 
     @Override
