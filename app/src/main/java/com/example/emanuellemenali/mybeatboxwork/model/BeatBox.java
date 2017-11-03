@@ -2,6 +2,8 @@ package com.example.emanuellemenali.mybeatboxwork.model;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.media.AudioManager;
+import android.media.SoundPool;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,9 +16,12 @@ public class BeatBox {
 
     private AssetManager mAssets;
     private List<Sound> mSounds = new ArrayList<>();
+    private SoundPool mSoundPool;
+    private static final int MAX_SOUNDS = 5;
 
     public BeatBox(Context context) {
         mAssets = context.getAssets();
+        mSoundPool = new SoundPool(MAX_SOUNDS, AudioManager.STREAM_MUSIC, 0);
         loadSounds();
     }
 
