@@ -40,7 +40,8 @@ public class SoundAdapter extends RecyclerView.Adapter<SoundHolder> {
 
     @Override
     public void onBindViewHolder(SoundHolder holder, int position) {
-
+        Sound sound = mSounds.get(position);
+        holder.bind(sound);
     }
 
     @Override
